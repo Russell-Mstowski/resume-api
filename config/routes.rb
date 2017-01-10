@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/experiences/:id' => 'experiences#show'
 
   get '/allroads' => "resumes#index"
-end
+  get '/' => 'students#index'
+
