@@ -9,16 +9,30 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-ActiveRecord::Schema.define(version: 20170110013435) do
+
+ActiveRecord::Schema.define(version: 20170110014816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "skills", force: :cascade do |t|
-    t.string   "skill_name"
+  create_table "capstones", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "url"
     t.integer  "student_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "educations", force: :cascade do |t|
+    t.string   "student_id"
+    t.string   "start_date"
+    t.string   "end_date"
+    t.string   "degree"
+    t.string   "university_name"
+    t.text     "details"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "experiences", force: :cascade do |t|
@@ -31,13 +45,12 @@ ActiveRecord::Schema.define(version: 20170110013435) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
-  create_table "capstones", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.string   "url"
+
+  create_table "skills", force: :cascade do |t|
+    t.string   "skill_name"
     t.integer  "student_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "students", force: :cascade do |t|
