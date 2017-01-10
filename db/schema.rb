@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170110014049) do
+=======
+ActiveRecord::Schema.define(version: 20170110014816) do
+>>>>>>> b097d19760cefdfa273ffe565d839bcee1f68667
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "experiences", force: :cascade do |t|
     t.date     "start_date"
     t.date     "end_date"
@@ -24,6 +29,15 @@ ActiveRecord::Schema.define(version: 20170110014049) do
     t.integer  "student_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+=======
+  create_table "capstones", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "url"
+    t.integer  "student_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+>>>>>>> b097d19760cefdfa273ffe565d839bcee1f68667
   end
 
   create_table "students", force: :cascade do |t|
