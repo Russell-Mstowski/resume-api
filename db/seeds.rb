@@ -21,3 +21,4 @@
     photo: Faker::LoremPixel.image,
     )
 end
+
