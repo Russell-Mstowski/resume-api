@@ -9,17 +9,18 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170110014049) do
-=======
-ActiveRecord::Schema.define(version: 20170110014816) do
->>>>>>> b097d19760cefdfa273ffe565d839bcee1f68667
+ActiveRecord::Schema.define(version: 20170110013435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
+  create_table "skills", force: :cascade do |t|
+    t.string   "skill_name"
+    t.integer  "student_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "experiences", force: :cascade do |t|
     t.date     "start_date"
     t.date     "end_date"
@@ -29,7 +30,7 @@ ActiveRecord::Schema.define(version: 20170110014816) do
     t.integer  "student_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-=======
+  end
   create_table "capstones", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
@@ -37,7 +38,6 @@ ActiveRecord::Schema.define(version: 20170110014816) do
     t.integer  "student_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
->>>>>>> b097d19760cefdfa273ffe565d839bcee1f68667
   end
 
   create_table "students", force: :cascade do |t|
