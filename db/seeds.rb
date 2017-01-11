@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 skills = ["HTML", "CSS", "Ruby", "Rails", "Git", "C++"]
+degrees = ["History", "Computer Science", "Education", "Engineering", "Political Science", "Philosophy", "General Studies"]
 
 10.times do 
   first_name = Faker::Name.first_name
@@ -46,6 +47,17 @@ skills = ["HTML", "CSS", "Ruby", "Rails", "Git", "C++"]
     Skill.create(
       skill_name: skills.sample,
       student_id: student.id,  
+      )
+  end
+  5.times do 
+    date = Faker::Date.between(30.years.ago, 5.years.ago)
+    Education.create(
+      start_date: date,
+      end_date: date + 4.years,
+      degree: degrees.sample,
+      university_name: Faker::University.name,
+      details: Faker::Lorem.paragraph,
+      student_id: student.id,
       )
   end
 end
