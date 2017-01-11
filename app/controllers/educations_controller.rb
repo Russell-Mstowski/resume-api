@@ -1,4 +1,4 @@
-class Api::V1::EducationsController < ApplicationController
+class EducationsController < ApplicationController
   def index
     @educations = Education.all
     render 'index.json.jbuilder'
