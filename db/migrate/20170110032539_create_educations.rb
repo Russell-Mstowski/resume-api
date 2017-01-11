@@ -6,6 +6,7 @@ class CreateEducations < ActiveRecord::Migration[5.0]
       t.string :degree
       t.string :university_name
       t.text :details
+      t.integer :student_id
 
       t.timestamps
     end

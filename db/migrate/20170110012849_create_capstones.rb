@@ -2,7 +2,7 @@ class CreateCapstones < ActiveRecord::Migration[5.0]
   def change
     create_table :capstones do |t|
       t.string :name
-      t.string :descripton
+      t.string :description
       t.string :url
       t.integer :student_id
 
