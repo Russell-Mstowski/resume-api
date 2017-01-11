@@ -1,4 +1,5 @@
 json.array! @students.each do |student|
+  json.id student.id
   json.name student.first_name + student.last_name
   json.email student.email
   json.phone_number student.phone_number
@@ -9,5 +10,8 @@ json.array! @students.each do |student|
   json.online_resume_url student.online_resume_url
   json.github_url student.github_url
   json.photo student.photo
-
+  json.skills student.skills
+  json.capstones student.capstones
+  json.educations student.educations
+  json.experiences student.experiences
 end
