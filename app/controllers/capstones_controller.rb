@@ -1,4 +1,4 @@
-class Api::V1::CapstonesController < ApplicationController
+class CapstonesController < ApplicationController
   def index
     @capstones = Capstone.all
     render 'index.json.jbuilder'
